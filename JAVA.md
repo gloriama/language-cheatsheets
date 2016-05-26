@@ -38,6 +38,8 @@ JavaScript | Java
 
 *Or whatever data type and array length. Note that a length IS required in Java!
 
+Note that when an `int` array is initialized in Java, each entry will be initialized to 0. In JavaScript, each item is initialized to undefined.
+
 
 ### Objects/Sets
 JavaScript | Java
