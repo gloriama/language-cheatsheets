@@ -18,12 +18,17 @@ JavaScript | Java
 ---------- | ----
 `str[i]` or `str.charAt(i)` | `str.charAt(i)`
 `str.length` | `str.length()`
+`''` or `""` | `""`*
 
-JavaScript has a nice built-in syntax of treating a string as an array of characters. To get this behavior in Java, use `str.toCharArray()` to get the string as a (new) character array. You can modify as desired, and then use `new String(charArray)` to get a string again. 
+*Single quotes in Java are used to indicate a character, which is a separate data type. Thus, if you use single quotes, you must enclose exactly one character - anything else (e.g. `''`, `'abc'`) will throw an error.
+
+JavaScript has a nice built-in syntax of treating a string as an array of characters. To get this behavior in Java, use `str.toCharArray()` to get the string as a (new) character array. You can modify as desired, and then use `new String(charArray)` to get a string again.
+
 
 ### Arrays
 JavaScript | Java
 ---------- | ----
 `var arr = [];` | `int[] arr = new int[5];`*
+`arr.length` | `arr.length`
 
 *Or whatever data type and array length. Note that a length IS required in Java!
