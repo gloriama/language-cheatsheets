@@ -44,9 +44,12 @@ Note that when an `int` array is initialized in Java, each entry will be initial
 ### Objects/Sets
 JavaScript | Java
 ---------- | ----
-`var obj = {};` | `Map<String, Integer> obj = new HashMap<>();`*
+`var obj = {};` | `Map<String, Integer> map = new HashMap<>();`*
 `var set = new Set();` | `Set<String> set = new HashSet<>();`**
-`for (var item in obj) { ... }` | `for (Map.Entry<String, Integer> entry : obj) { //entry.getKey() or entry.getValue() ... }`
+`for (var item in obj) { ... }`, assuming obj is being used as a set | `for (Integer item : set) { ... }`
+`obj[key]` | `map.get(key)`
+`obj[key] || 0` | `map.getOrDefault(key, 0)`
+`obj[key] = value;` | `map.put(key, value);`
 
 \*Note that the pair of types between the angle brackets refers to the type for the keys and values, respectively.
 
