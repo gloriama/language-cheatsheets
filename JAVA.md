@@ -24,6 +24,9 @@ JavaScript | Java
 
 JavaScript has a nice built-in syntax of treating a string as an array of characters. To get this behavior in Java, use `str.toCharArray()` to get the string as a (new) character array. You can modify as desired, and then use `new String(charArray)` to get a string again.
 
+Other notes:
+* Java string concatenation is horrendously slow. Better to use `StringBuilder` to create larger strings.
+
 
 ### Arrays
 JavaScript | Java
