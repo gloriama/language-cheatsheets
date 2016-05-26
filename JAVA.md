@@ -35,3 +35,16 @@ JavaScript | Java
 `arr.length` | `arr.length`
 
 *Or whatever data type and array length. Note that a length IS required in Java!
+
+
+### Math
+
+Math largely has the exact same syntax and naming:
+* `Math.pow`
+* `Math.sqrt`
+* `Math.log`
+* `Math.ceil`
+* `Math.floor`
+* `Math.round`
+
+However, note that in Java, these all return values of type double (even `ceil`, `floor`, and `round`). So if you want to compare these to values of type int, you must cast them to integers prefixing the expressions with `(int)`. Note that casting truncates the values, therefore rounding down automatically.
