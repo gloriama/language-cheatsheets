@@ -37,6 +37,14 @@ JavaScript | Java
 *Or whatever data type and array length. Note that a length IS required in Java!
 
 
+### Objects
+JavaScript | Java
+---------- | ----
+'var obj = {};' | 'HashMap<String, Integer> obj = new HashMap<String, Integer>();'*
+
+*Oh yes, this is painful to behold. Note that the pair of types between the angle brackets refers to the type for the keys and values, respectively.
+
+
 ### Math
 
 Math largely has the exact same syntax and naming:
