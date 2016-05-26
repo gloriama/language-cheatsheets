@@ -48,3 +48,15 @@ Math largely has the exact same syntax and naming:
 * `Math.round`
 
 However, note that in Java, these all return values of type double (even `ceil`, `floor`, and `round`). So if you want to compare these to values of type int, you must cast them to integers prefixing the expressions with `(int)`. Note that casting truncates the values, therefore rounding down automatically.
+
+
+### Operators
+JavaScript | Java
+---------- | ----
+`===` | `==`
+`!==` | `!=`
+`!root` | `root == null`*
+
+As in most languages, the operators (mathematical, bitwise, logical) are all largely the same. The differences above are because all values are already typed in Java, so it is never necessary to specify that items should not be coerced to the same type before testing for equality/non-equality.
+
+*Note that the concept of "truthy" and "falsy" values no longer exist in Java - either a value is a Boolean or not. So expressions like `if (!root) { ... }`, which are ubiquitous in JavaScript, do not work in Java. Instead, an explicit check of `root == null` (or `x == 0`, or so on) must be used.
