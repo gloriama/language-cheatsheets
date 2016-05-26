@@ -37,12 +37,16 @@ JavaScript | Java
 *Or whatever data type and array length. Note that a length IS required in Java!
 
 
-### Objects
+### Objects/Sets
 JavaScript | Java
 ---------- | ----
-'var obj = {};' | 'HashMap<String, Integer> obj = new HashMap<String, Integer>();'*
+`var obj = {};` | `Map<String, Integer> obj = new HashMap<>();`*
+`var set = new Set();` | `Set<String> set = new HashSet<>();`**
+`for (var item in obj) { ... }` | `for (Map.Entry<String, Integer> entry : obj) { //entry.getKey() or entry.getValue() ... }`
 
-*Oh yes, this is painful to behold. Note that the pair of types between the angle brackets refers to the type for the keys and values, respectively.
+\*Note that the pair of types between the angle brackets refers to the type for the keys and values, respectively.
+
+\*\*Note that the type between the angle brackets refers to the type for the items in the set.
 
 
 ### Math
