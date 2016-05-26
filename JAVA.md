@@ -9,6 +9,7 @@ Unlike JavaScript, Java:
 * is a compiled language
 * is an object-oriented language, i.e. everything must be inside a class
 * is a typed language. Say goodbye to `var`, and start getting used to `int`, `String`, and so on!
+* scopes variables to the enclosing block (including ifs, loops, functions, etc.), not only to the enclosing function. This includes variables inside a loop signature, e.g. `for (var i = 0; ... )`.
 
 
 ## Cheatsheet
