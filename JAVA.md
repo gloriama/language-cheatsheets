@@ -33,6 +33,7 @@ Other notes:
 JavaScript | Java
 ---------- | ----
 `var arr = [];` | `int[] arr = new int[5];`*
+`var arr = [1, 2];` | `int[] arr = {1, 2};`
 `arr.length` | `arr.length`
 
 *Or whatever data type and array length. Note that a length IS required in Java!
