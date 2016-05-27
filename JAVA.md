@@ -58,20 +58,28 @@ JavaScript | Java
 Lists are linked lists, and are best used in place of JavaScript arrays that are expected to change their length, e.g. via push, pop, etc. Syntactically (and of course nominally), JavaScript arrays look like Java arrays, but in many usages are actually more like Java lists.
 
 
-### Objects/Sets
+### Objects
 JavaScript | Java
 ---------- | ----
 `var obj = {};` | `Map<String, Integer> map = new HashMap<>();`*
-`var set = new Set();` | `Set<String> set = new HashSet<>();`**
 `for (var item in obj) { ... }` | `for (Integer item : map.keySet()) { ... }`
 `obj[key]` | `map.get(key)`
 `obj[key] || 0` | `map.getOrDefault(key, 0)`
 `obj[key] = value;` | `map.put(key, value);`
 `Object.keys(obj)` | `map.keySet()`
 
-\*Note that the pair of types between the angle brackets refers to the type for the keys and values, respectively.
+*Note that the pair of types between the angle brackets refers to the type for the keys and values, respectively.
 
-\*\*Note that the type between the angle brackets refers to the type for the items in the set.
+
+### Sets
+JavaScript | Java
+---------- | ----
+`var set = new Set();` | `Set<String> set = new HashSet<>();`*
+`set.add(item);` | `set.add(item);`
+`set.delete(item);` | `set.remove(item);`
+`set.has(item)` | `set.contains(item)`
+
+*Note that the type between the angle brackets refers to the type for the items in the set.
 
 
 ### Math
