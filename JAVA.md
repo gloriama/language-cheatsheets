@@ -34,11 +34,28 @@ JavaScript | Java
 ---------- | ----
 `var arr = [];` | `int[] arr = new int[5];`*
 `var arr = [1, 2];` | `int[] arr = {1, 2};`
+`[1, 2]` | `new int[] {1, 2}`
 `arr.length` | `arr.length`
+`for (var i = 0; i < arr.length; i++) { ... }` | `for (int item : arr) { ... }`
 
-*Or whatever data type and array length. Note that a length IS required in Java!
+*Or whatever data type and array length. Note that a length IS required in Java, because Java arrays are fixed-length. If you want something more like the variable-length arrays you are used to from JavaScript, check out [Lists](#lists) below!
 
 Note that when an `int` array is initialized in Java, each entry will be initialized to 0. In JavaScript, each item is initialized to undefined.
+
+
+### Lists
+JavaScript | Java
+---------- | ----
+`var arr = [];` | `List<Integer> list = new ArrayList<>();`
+`arr.length` | `list.size()`
+`arr[i]` | `list.get(i)`
+`arr[i] = value;` | `list.set(i, value);`
+`arr.push(value);` | `list.add(value);`
+`arr.splice(i, 0, value);` | `list.add(i, value);`
+`arr = arr.concat(otherArr);` | `list.addAll(otherList);`
+`arr.slice(i, j)` | `list.subList(i, j)`
+
+Lists are linked lists, and are best used in place of JavaScript arrays that are expected to change their length, e.g. via push, pop, etc. Syntactically (and of course nominally), JavaScript arrays look like Java arrays, but in many usages are actually more like Java lists.
 
 
 ### Objects/Sets
@@ -46,10 +63,11 @@ JavaScript | Java
 ---------- | ----
 `var obj = {};` | `Map<String, Integer> map = new HashMap<>();`*
 `var set = new Set();` | `Set<String> set = new HashSet<>();`**
-`for (var item in obj) { ... }`, assuming obj is being used as a set | `for (Integer item : set) { ... }`
+`for (var item in obj) { ... }` | `for (Integer item : map.keySet()) { ... }`
 `obj[key]` | `map.get(key)`
 `obj[key] || 0` | `map.getOrDefault(key, 0)`
 `obj[key] = value;` | `map.put(key, value);`
+`Object.keys(obj)` | `map.keySet()`
 
 \*Note that the pair of types between the angle brackets refers to the type for the keys and values, respectively.
 
