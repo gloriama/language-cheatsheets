@@ -58,6 +58,9 @@ JavaScript | Python
 `str.slice(i)` | `str[i:]`
 `str.slice()` | `str[:]`
 `for (var i = 0; i < str.length; i++)` | `for char in s:`
+`'a'.charCodeAt(0)` | `ord('a')`
+`str.split(',')` | `str.split(',')`
+`str.split('')` | `list(str)`
 
 Python also has an "extended slice" syntax, where you can specify a third item: `str[start:end:step]`, where `step` refers to how you'd like to hop through the string from `start` to `end` (default is 1). Thus, to reverse a string you can actually use the incredibly cryptic `str[::-1]`.
 
@@ -71,6 +74,8 @@ JavaScript | Python
 `obj[key]` | `dict[key]` or `dict.get(key)`**
 `obj[key] || 0` | `dict.get(key, 0)`
 `delete obj[key]` | `del dict[key]`***
+`Object.keys(obj)` | `dict.keys()`
+`key in obj` | `dict.has_key(key)`
 
 \*Note Python can take keys of different types (string, number, `None` - though not Booleans, arrays, or other dicts). Therefore it does **not** automatically stringify keys.
 
@@ -91,8 +96,9 @@ JavaScript | Python
 `s.delete(item);` | `s.remove(item)`
 `s.has(item)` | `item in s`
 
+To convert an array `arr` to a set in Python, simply use `set(arr)`.
 
-### Arrays
+### Arrays/Lists
 JavaScript | Python
 ---------- | ------
 `arr.length` | `len(arr)`
@@ -103,8 +109,11 @@ JavaScript | Python
 `for (var i = 0; i < arr.length; i++)` | `for item in arr:`
 `arr.push(value)` | `arr.append(value)`
 `arr.sort()` | `sorted(arr)`
+`arr = arr.concat(newArr)` | `arr += newArr`
 
 Arrays are very similar in JavaScript and Python, in both syntax and usage. In particular, both are variable-length (unlike languages like C and Java where arrays are fixed-length and do not contain methods such as push or pop).
+
+Note that in Python, you cannot set the value of an array index if the array does not already contain that index. The array must already have an item at an index (e.g. via append or initialization) for it to be set to something else. Otherwise, it will throw an error.
 
 
 ### Math
@@ -122,6 +131,7 @@ JavaScript | Python
 ---------- | ------
 `&&` | `and`
 `||` | `or`
+`!` | `not
 `===` | `==`*
 `!==` | `!=`*
 `!root` | `root == None`*
