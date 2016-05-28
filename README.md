@@ -3,7 +3,7 @@ A collection of cheatsheets for the JavaScript programmer looking to learn other
 
 ## Table of Contents
 1. [Java](./JAVA.md)
-1. [Python](./Python.md)
+1. [Python](./PYTHON.md)
 1. [C](./C.md)
 
 ## About this repo

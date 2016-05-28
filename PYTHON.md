@@ -131,13 +131,13 @@ JavaScript | Python
 ---------- | ------
 `&&` | `and`
 `||` | `or`
-`!` | `not
+`!` | `not`
 `===` | `==`*
 `!==` | `!=`*
 `!root` | `root == None`*
 `i++` | `i += 1`
 
-\*The differences above are because all values are already typed in Java, so it is never necessary to specify that items should not be coerced to the same type before testing for equality/non-equality.
+\*The differences above are because all values are already typed in Python, so it is never necessary to specify that items should not be coerced to the same type before testing for equality/non-equality.
 
 Note that the concept of "truthy" and "falsy" values no longer exist in Python - either a value is a Boolean or not. So expressions like `if (!root) { ... }`, which are ubiquitous in JavaScript, do not work in Python. Instead, an explicit check of `root == None` (or `x == 0`, or so on) must be used.
 
